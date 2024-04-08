@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'gilroy';
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#container{
+    height: 300px;
+    width: 300px;
+    background-color: aqua;
+    position: absolute;
+    /* top: 5%;
+    left: 5%; */
+    border: 2px solid red;
+    border-radius: 20px;
+    /*applying the animation*/
+    animation-name: anime;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    transition: all ease 2s;
+    /*backwards = initial stage before animation.
+    forwards = final state of animation.*/
+    animation-fill-mode: forwards;
+    animation-iteration-count: 3;/*3 patak loop maa chalxa. we can do infinite also.*/
+    /*timing function means = first maa fast move garera sakine bela maa
+    slow huni yaa first maa slow move garera  sakina bela maa fast move
+    huni yesto function ho.
+    ease in = slow start fast end.
+    ease out = slow end fast start
+    linear = normal start normal end*/
+    animation-timing-function: ease-in;
+    /*aletrnate= ek patak sidha ek patak ulto , normal, reverse*/
+    animation-direction: normal;
+}
+
+
+/* keyframes */
+/*This is animation of initial state and final state*/
+
+/* @keyframes anime{
+    to{
+        right: 0;
+        background-color: aqua;
+    }
+    from{
+        left: 90%;
+        background-color: yellow;
+    }
+} */
+
+
+
+
+/*here we animate the initial state , final state and the state between initial and final state.*/
+@keyframes anime{
+    0%{
+        left: 0%;
+        background-color: aqua;
+        top: 0;
+        rotate:  0deg;
+
+    }
+    25%{
+        left: 60%;
+        background-color: tomato;
+        top: 0;
+        rotate:  900deg;
+    }
+    50%{
+        top: 60%;
+        left: 60%;
+        background-color: blue;
+        rotate:  180deg;
+    }
+    75%{
+        top: 60%;
+        left: 0%;
+        background-color: red;
+        rotate:  360deg;
+    }
+    100%{
+        top: 0;
+        left: 0%;
+        background-color: pink;
+        rotate:  0deg;
+    }
+}
